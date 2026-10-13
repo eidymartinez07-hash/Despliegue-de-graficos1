@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Aprende sobre canvas, p5.js y dibujos interactivos.">
+  <title>Arte y código | Mi sitio educativo</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#inicio">Arte y código</a>
+    <nav aria-label="Navegación principal">
+      <a href="#proyectos">Proyectos</a>
+      <a href="#canvas">Canvas</a>
+      <a href="#p5js">p5.js</a>
+      <a href="arbol_DOM.html">Arbol dom</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <p class="eyebrow">Mi sitio educativo</p>
+      <h1>El arte también se puede programar</h1>
+      <p>
+        Explora dibujos y animaciones creados con código web,
+        y aprende las herramientas que los hacen posibles.
+      </p>
+      <a class="button" href="#proyectos">Ver mis proyectos</a>
+
+      <div class="art-card" aria-label="Dibujo de demostración">
+        <canvas id="demo-canvas" width="640" height="300">
+          Tu navegador no admite canvas.
+        </canvas>
+      </div>
+      <p class="caption">Demostración hecha con el contexto 2D de canvas.</p>
+    </section>
+
+    <div class="project-grid">
+            <article class="project-card">
+            <span class="project-number">01</span>
+            <h3>Muñeco de nieve</h3>
+            <p>Dibujo con rectángulos, elipses y líneas.</p>
+            <a href="#inicio">Ver el dibujo</a>
+            </article>
+
+            <article class="project-card">
+            <span class="project-number">02</span>
+            <h3>Muñeco de nieve soleado</h3>
+            <p>Un paisaje con cielo azul, suelo verde y un sol brillante.</p>
+            <a href="#dibujo-soleado">Ver el dibujo</a>
+            </article>
+
+            <article class="project-card">
+            <span class="project-number">03</span>
+            <h3>¿Qué hay para cenar?</h3>
+            <p>Una rebanada de pizza sobre un plato y una mesa de madera.</p>
+            <a href="#dibujo-pizza">Ver el dibujo</a>
+            </article>
+
+            <article class="project-card">
+            <span class="project-number">04</span>
+            <h3>Dientes de conejo</h3>
+            <p>Un conejo dibujado con elipses, una línea y rectángulos.</p>
+            <a href="#dibujo-conejo">Ver el dibujo</a>
+            </article>
+
+            <article class="project-card">
+            <span class="project-number">05</span>
+            <h3>La rana</h3>
+            <p>Una cara de rana verde con ojos saltones y una gran boca.</p>
+            <a href="#dibujo-rana">Ver el dibujo</a>
+            </article>
+        </div>
+        </section>
+
+        <!-- Segundo dibujo -->
+        <section class="section sunny-section" id="dibujo-soleado">
+        <p class="eyebrow">Proyecto 02</p>
+        <h2>Muñeco de nieve soleado</h2>
+        <p class="section-intro">
+            Un muñeco de nieve bajo el sol, adaptado al contexto 2D de canvas.
+        </p>
+        <div class="art-card sunny-art-card">
+            <canvas id="sunny-canvas" width="400" height="400">
+            Tu navegador no admite canvas.
+            </canvas>
+        </div>
+        </section>
+
+        <!-- Tercer dibujo -->
+        <section class="section" id="dibujo-pizza">
+        <p class="eyebrow">Proyecto 03</p>
+        <h2>¿Qué hay para cenar?</h2>
+        <p class="section-intro">
+            Una pizza dibujada con formas geométricas en el contexto 2D de canvas.
+        </p>
+        <div class="art-card sunny-art-card">
+            <canvas id="pizza-canvas" width="400" height="400">
+            Tu navegador no admite canvas.
+            </canvas>
+        </div>
+        </section>
+
+        <!-- Cuarto dibujo -->
+        <section class="section sunny-section" id="dibujo-conejo">
+        <p class="eyebrow">Proyecto 04</p>
+        <h2>Dientes de conejo</h2>
+        <p class="section-intro">
+            Un dibujo de conejo adaptado de Khan Academy con formas del contexto 2D.
+        </p>
+        <div class="art-card sunny-art-card">
+            <canvas id="bunny-canvas" width="400" height="300">
+            Tu navegador no admite canvas.
+            </canvas>
+        </div>
+        </section>
+
+        <!-- Quinto dibujo -->
+        <section class="section" id="dibujo-rana">
+        <p class="eyebrow">Proyecto 05</p>
+        <h2>La rana</h2>
+        <p class="section-intro">
+            Una cara de rana verde con ojos blancos y pupilas cuadradas.
+        </p>
+        <div class="art-card sunny-art-card">
+            <canvas id="frog-canvas" width="400" height="320">
+            Tu navegador no admite canvas.
+            </canvas>
+        </div>
+        </section>
+
+    <section class="section section-tint" id="canvas">
+      <p class="eyebrow">Concepto 1</p>
+      <h2>¿Qué es <code>&lt;canvas&gt;</code>?</h2>
+
+      <div class="lesson-grid">
+        <p>
+          La etiqueta <code>&lt;canvas&gt;</code> crea un área rectangular
+          donde JavaScript puede dibujar. La etiqueta reserva el espacio;
+          el código JavaScript decide qué aparece dentro.
+        </p>
+
+        <div class="lesson-note">
+          <h3>El contexto 2D</h3>
+          <p>
+            Con <code>canvas.getContext("2d")</code> obtenemos herramientas
+            para dibujar líneas, rectángulos, círculos, texto e imágenes.
+            Las coordenadas empiezan en la esquina superior izquierda:
+            <code>(0, 0)</code>.
+          </p>
+        </div>
+      </div>
+
+      <pre><code>const canvas = document.querySelector("canvas");
+const ctx = canvas.getContext("2d");
+
+ctx.fillStyle = "#f27a61";
+ctx.fillRect(20, 20, 100, 60);</code></pre>
+
+      <p class="caption">
+        El ejemplo obtiene el contexto 2D, elige un color y dibuja un rectángulo.
+      </p>
+    </section>
+
+    <section class="section" id="p5js">
+      <p class="eyebrow">Concepto 2</p>
+      <h2>Fundamentos de p5.js</h2>
+      <p class="section-intro">
+        p5.js es una biblioteca de JavaScript para crear dibujos,
+        animaciones e interacciones de forma accesible.
+      </p>
+
+      <div class="concept-grid">
+        <article class="concept-card">
+          <h3><code>setup()</code></h3>
+          <p>
+            Se ejecuta una vez al iniciar. Normalmente crea el lienzo
+            con <code>createCanvas(ancho, alto)</code>.
+          </p>
+        </article>
+
+        <article class="concept-card">
+          <h3><code>draw()</code></h3>
+          <p>
+            Se repite muchas veces por segundo. Al redibujar la escena,
+            permite crear animaciones.
+          </p>
+        </article>
+
+        <article class="concept-card">
+          <h3>Interacción</h3>
+          <p>
+            Variables como <code>mouseX</code> y <code>mouseY</code>
+            permiten responder a la posición del ratón.
+          </p>
+        </article>
+      </div>
+
+      <pre><code>function setup() {
+  createCanvas(400, 200);
+}
+
+function draw() {
+  background(245, 239, 226);
+  circle(mouseX, mouseY, 40);
+}</code></pre>
+
+      <p class="caption">
+        Este ejemplo de p5.js crea un círculo que sigue al ratón.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Hecho por [tu nombre] · Proyecto escolar de arte y programación</p>
+  </footer>
+</body>
+</html>

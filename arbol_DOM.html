@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Árbol visual del DOM del sitio Arte y código.">
+  <title>Árbol del DOM | Arte y código</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dom-page">
+  <header class="site-header">
+    <a class="brand" href="index.html">Arte y código</a>
+    <nav aria-label="Navegación principal">
+      <a href="index.html">Página principal</a>
+      <a href="#index-tree">DOM de index.html</a>
+      <a href="#inspector-tree">DOM de esta página</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="dom-intro">
+      <p class="eyebrow">Estructura del sitio</p>
+      <h1>Árbol visual del DOM</h1>
+      <p>
+        El DOM organiza las etiquetas HTML como un árbol: cada elemento puede
+        contener elementos hijos. Aquí se muestran las dos páginas HTML de este proyecto.
+      </p>
+      <a class="button" href="index.html">Volver al sitio</a>
+    </section>
+
+    <section class="section dom-section" id="index-tree">
+      <p class="eyebrow">Página 1</p>
+      <h2>Árbol de <code>index.html</code></h2>
+      <p class="section-intro">
+        Esta página contiene la portada, la galería de cinco dibujos y las explicaciones de canvas y p5.js.
+      </p>
+
+      <div class="tree-card">
+        <ul class="dom-tree">
+          <li>
+            <span class="tree-node tree-root">&lt;html lang="es"&gt;</span>
+            <ul>
+              <li>
+                <span class="tree-node tree-head">&lt;head&gt;</span>
+                <ul>
+                  <li><span class="tree-node">&lt;meta charset&gt;</span></li>
+                  <li><span class="tree-node">&lt;meta name="viewport"&gt;</span></li>
+                  <li><span class="tree-node">&lt;title&gt;Arte y código&lt;/title&gt;</span></li>
+                  <li><span class="tree-node">&lt;link href="styles.css"&gt;</span></li>
+                  <li><span class="tree-node">&lt;script src="script.js" defer&gt;</span></li>
+                </ul>
+              </li>
+
+              <li>
+                <span class="tree-node tree-body">&lt;body&gt;</span>
+                <ul>
+                  <li>
+                    <span class="tree-node">&lt;header class="site-header"&gt;</span>
+                    <ul>
+                      <li><span class="tree-node">&lt;a class="brand"&gt;</span></li>
+                      <li>
+                        <span class="tree-node">&lt;nav&gt;</span>
+                        <ul>
+                          <li><span class="tree-node">&lt;a&gt;Proyectos&lt;/a&gt;</span></li>
+                          <li><span class="tree-node">&lt;a&gt;Canvas&lt;/a&gt;</span></li>
+                          <li><span class="tree-node">&lt;a&gt;p5.js&lt;/a&gt;</span></li>
+                          <li><span class="tree-node">&lt;a&gt;Árbol DOM&lt;/a&gt;</span></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <span class="tree-node tree-main">&lt;main&gt;</span>
+                    <ul>
+                      <li>
+                        <span class="tree-node">&lt;section id="inicio"&gt;</span>
+                        <ul>
+                          <li><span class="tree-node">&lt;h1&gt;Título principal&lt;/h1&gt;</span></li>
+                          <li><span class="tree-node">&lt;p&gt;Introducción&lt;/p&gt;</span></li>
+                          <li><span class="tree-node">&lt;a class="button"&gt;</span></li>
+                          <li><span class="tree-node tree-canvas">&lt;canvas id="demo-canvas"&gt;</span></li>
+                        </ul>
+                      </li>
+
+                      <li>
+                        <span class="tree-node">&lt;section id="proyectos"&gt;</span>
+                        <ul>
+                          <li><span class="tree-node">&lt;h2&gt;Mis proyectos&lt;/h2&gt;</span></li>
+                          <li>
+                            <span class="tree-node">&lt;div class="project-grid"&gt;</span>
+                            <ul>
+                              <li><span class="tree-node">&lt;article&gt;Muñeco de nieve&lt;/article&gt;</span></li>
+                              <li><span class="tree-node">&lt;article&gt;Muñeco soleado&lt;/article&gt;</span></li>
+                              <li><span class="tree-node">&lt;article&gt;Pizza&lt;/article&gt;</span></li>
+                              <li><span class="tree-node">&lt;article&gt;Dientes de conejo&lt;/article&gt;</span></li>
+                              <li><span class="tree-node">&lt;article&gt;Rana&lt;/article&gt;</span></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+
+                      <li>
+                        <span class="tree-node">&lt;section id="dibujo-soleado"&gt;</span>
+                        <ul>
+                          <li><span class="tree-node tree-canvas">&lt;canvas id="sunny-canvas"&gt;</span></li>
+                        </ul>
+                      </li>
+
+                      <li>
+                        <span class="tree-node">&lt;section id="dibujo-pizza"&gt;</span>
+                        <ul>
+                          <li><span class="tree-node tree-canvas">&lt;canvas id="pizza-canvas"&gt;</span></li>
+                        </ul>
+                      </li>
+
+                      <li>
+                        <span class="tree-node">&lt;section id="dibujo-conejo"&gt;</span>
+                        <ul>
+                          <li><span class="tree-node tree-canvas">&lt;canvas id="bunny-canvas"&gt;</span></li>
+                        </ul>
+                      </li>
+
+                      <li>
+                        <span class="tree-node">&lt;section id="dibujo-rana"&gt;</span>
+                        <ul>
+                          <li><span class="tree-node tree-canvas">&lt;canvas id="frog-canvas"&gt;</span></li>
+                        </ul>
+                      </li>
+
+                      <li>
+                        <span class="tree-node">&lt;section id="canvas"&gt;</span>
+                        <ul>
+                          <li><span class="tree-node">&lt;h2&gt;¿Qué es canvas?&lt;/h2&gt;</span></li>
+                          <li><span class="tree-node">&lt;p&gt;Explicación del contexto 2D&lt;/p&gt;</span></li>
+                          <li><span class="tree-node">&lt;pre&gt;&lt;code&gt;Ejemplo&lt;/code&gt;&lt;/pre&gt;</span></li>
+                        </ul>
+                      </li>
+
+                      <li>
+                        <span class="tree-node">&lt;section id="p5js"&gt;</span>
+                        <ul>
+                          <li><span class="tree-node">&lt;h2&gt;Fundamentos de p5.js&lt;/h2&gt;</span></li>
+                          <li><span class="tree-node">&lt;article&gt;setup(), draw(), interacción&lt;/article&gt;</span></li>
+                          <li><span class="tree-node">&lt;pre&gt;&lt;code&gt;Ejemplo&lt;/code&gt;&lt;/pre&gt;</span></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <span class="tree-node">&lt;footer&gt;</span>
+                    <ul>
+                      <li><span class="tree-node">&lt;p&gt;Autor y proyecto escolar&lt;/p&gt;</span></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section dom-section" id="inspector-tree">
+      <p class="eyebrow">Página 2</p>
+      <h2>Árbol de <code>dom-inspector.html</code></h2>
+      <p class="section-intro">
+        Este esquema muestra la estructura de la página que estás viendo ahora.
+      </p>
+
+      <div class="tree-card">
+        <ul class="dom-tree">
+          <li>
+            <span class="tree-node tree-root">&lt;html lang="es"&gt;</span>
+            <ul>
+              <li>
+                <span class="tree-node tree-head">&lt;head&gt;</span>
+                <ul>
+                  <li><span class="tree-node">&lt;meta charset&gt;</span></li>
+                  <li><span class="tree-node">&lt;meta name="viewport"&gt;</span></li>
+                  <li><span class="tree-node">&lt;title&gt;Árbol del DOM&lt;/title&gt;</span></li>
+                  <li><span class="tree-node">&lt;link href="styles.css"&gt;</span></li>
+                </ul>
+              </li>
+
+              <li>
+                <span class="tree-node tree-body">&lt;body class="dom-page"&gt;</span>
+                <ul>
+                  <li>
+                    <span class="tree-node">&lt;header class="site-header"&gt;</span>
+                    <ul>
+                      <li><span class="tree-node">&lt;a class="brand"&gt;Arte y código&lt;/a&gt;</span></li>
+                      <li><span class="tree-node">&lt;nav&gt;Enlaces de navegación&lt;/nav&gt;</span></li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <span class="tree-node tree-main">&lt;main&gt;</span>
+                    <ul>
+                      <li>
+                        <span class="tree-node">&lt;section class="dom-intro"&gt;</span>
+                        <ul>
+                          <li><span class="tree-node">&lt;h1&gt;Árbol visual del DOM&lt;/h1&gt;</span></li>
+                          <li><span class="tree-node">&lt;p&gt;Descripción de la página&lt;/p&gt;</span></li>
+                          <li><span class="tree-node">&lt;a class="button"&gt;Volver al sitio&lt;/a&gt;</span></li>
+                        </ul>
+                      </li>
+
+                      <li>
+                        <span class="tree-node">&lt;section id="index-tree"&gt;</span>
+                        <ul>
+                          <li><span class="tree-node">&lt;h2&gt;Árbol de index.html&lt;/h2&gt;</span></li>
+                          <li><span class="tree-node">&lt;ul class="dom-tree"&gt;Árbol visual&lt;/ul&gt;</span></li>
+                        </ul>
+                      </li>
+
+                      <li>
+                        <span class="tree-node">&lt;section id="inspector-tree"&gt;</span>
+                        <ul>
+                          <li><span class="tree-node">&lt;h2&gt;Árbol de dom-inspector.html&lt;/h2&gt;</span></li>
+                          <li><span class="tree-node">&lt;ul class="dom-tree"&gt;Árbol visual&lt;/ul&gt;</span></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li><span class="tree-node">&lt;footer&gt;Créditos del proyecto&lt;/footer&gt;</span></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Hecho por [tu nombre] · Proyecto escolar de arte y programación</p>
+  </footer>
+</body>
+</html>
